@@ -23,6 +23,11 @@ scrape_configs:
     static_configs:
       - targets: ['postgres-metrics-collector-staging.up.railway.app']
 
+  - job_name: 'n8n'
+    static_configs:
+      - targets: ['n8n.aisparktec.com:5678']
+    metrics_path: /metrics
+
   # - job_name: 'postgres'
   #   scrape_interval: 5s
   #   static_configs:
